@@ -1,0 +1,231 @@
+:root {
+    --dark-bg: #1a1a1a;
+    --dark-card: #2d2d2d;
+    --accent: #00ff88;
+    --text: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--dark-card);
+    border-radius: 10px;
+}
+
+.nav-item {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cardekho.com%2Ftata%2Fnexon-ev%2Fpictures&psig=AOvVaw0yOWsFEB2fAbzoJviSioRY&ust=1744715504267000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOj1svGx14wDFQAAAAAdAAAAABAE');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Car Cards */
+.featured-cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.car-card {
+    background: var(--dark-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--accent);
+}
+
+.car-details {
+    padding: 1.5rem;
+}
+
+.car-price {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.car-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.car-details li {
+    margin-bottom: 0.4rem;
+}
+
+/* About Section */
+.about-section {
+    background: var(--dark-card);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    border-radius: 15px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background: #3d3d3d;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent);
+}
+
+/* Contact Section */
+.contact-info {
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Forms (Login, Signup, Forgot Password) */
+form {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: var(--dark-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #3d3d3d;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc6e;
+}
+
+form p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+form a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
